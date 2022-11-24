@@ -43,21 +43,22 @@ namespace Server
                     var request = (Request)JsonSerializer.Deserialize(json, typeof(Request));
 
                     string response = string.Empty;
-                    string[] responseForReceive;
+                    //string[] responseForReceive;
                     Console.WriteLine("On serv");
                     byte[] responseBytes;
                     switch (request.Mode)
                     {
                         case RequestType.Transmit:
                             Console.WriteLine("Have tr");
-                            response = storage.Add(request.Files);
+                            response = storage.Add(request.Bytes);
                             responseBytes = Encoding.UTF8.GetBytes(response);
                             socketToClient.Send(responseBytes);
                             break;
                         case RequestType.Receive:
                             Console.WriteLine("Have re");
-                            responseForReceive = storage.Get();
-                            responseBytes = Encoding.UTF8.GetBytes(responseForReceive[0]);
+                            //response = storage.Get();
+                            //responseBytes = Encoding.UTF8.GetBytes(responseForReceive[0]);
+                            responseBytes = storage.Get();
                             socketToClient.Send(responseBytes);
                             break;
                     }

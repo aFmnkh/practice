@@ -15,13 +15,16 @@ namespace Client
         {
             var ip = IPAddress.Parse(args[0]);
             var port = int.Parse(args[1]);
+            Console.WriteLine(args[2]);
+            Console.WriteLine(args[3]);
 
 
             var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             var endpoint = new IPEndPoint(ip, port);
             socket.Connect(endpoint);
 
-            var files = new string[args.Length - 3];
+            //var files = new string[args.Length - 3];
+            byte[] bytesToSend = null;
             var request = new Request();
 
             if (args[2].ToString() == "-transmit")
@@ -32,7 +35,8 @@ namespace Client
                     var streamReader = new StreamReader(args[i + 3]);
                     try
                     {
-                        files[i] = streamReader.ReadToEnd();
+                        //files[i] = streamReader.ReadToEnd();
+                        bytesToSend = Encoding.UTF8.GetBytes(streamReader.ReadToEnd());
                         streamReader.Close();
                     }
                     catch (Exception e)
@@ -44,7 +48,7 @@ namespace Client
                 request = new Request()
                 {
                     Mode = ParseRequestType(args[2]),
-                    Files = files,
+                    Bytes = bytesToSend,
                 };
             }
             if (args[2].ToString() == "-receive")
@@ -56,11 +60,11 @@ namespace Client
                 };
             }
 
-                /*var request = new Request()
-            {
-                Mode = ParseRequestType(args[2]),
-                Files = files,
-            };*/
+            /*var request = new Request()
+        {
+            Mode = ParseRequestType(args[2]),
+            Files = files,
+        };*/
             var json = JsonSerializer.Serialize(request);
             var bytes = Encoding.UTF8.GetBytes(json);
 
@@ -80,13 +84,15 @@ namespace Client
                 Console.WriteLine(args[3]);
                 Console.WriteLine(args[3].ToString());
                 var response = Encoding.Default.GetString(inputBuffer, 0, count);
+                Console.WriteLine(response);
                 //File.Create(args[3]);
                 //FileInfo fileInfo = new FileInfo(args[3]);
                 //fileInfo.Delete();
-                var streamWriter = new StreamWriter(args[3].ToString());
                 try
                 {
-                    streamWriter.WriteLine(response);
+                    var streamWriter = new StreamWriter(args[3].ToString());
+                    streamWriter.WriteLine(response.ToString());
+                    streamWriter.Close();
                 }
                 catch (Exception e)
                 {
@@ -94,7 +100,7 @@ namespace Client
                 }
 
             }
-            
+
 
         }
 

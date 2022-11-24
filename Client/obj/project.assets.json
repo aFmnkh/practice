@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sasha\\.nuget\\packages\\": {}
+    "C:\\Users\\ashpi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sasha\\source\\repos\\practice\\Client\\Client.csproj",
+      "projectUniqueName": "C:\\Users\\ashpi\\Documents\\GitHub\\practice\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "C:\\Users\\Sasha\\source\\repos\\practice\\Client\\Client.csproj",
-      "packagesPath": "C:\\Users\\Sasha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sasha\\source\\repos\\practice\\Client\\obj\\",
+      "projectPath": "C:\\Users\\ashpi\\Documents\\GitHub\\practice\\Client\\Client.csproj",
+      "packagesPath": "C:\\Users\\ashpi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ashpi\\Documents\\GitHub\\practice\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sasha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ashpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,9 +51,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Sasha\\source\\repos\\practice\\Common\\Common.csproj": {
-              "projectPath": "C:\\Users\\Sasha\\source\\repos\\practice\\Common\\Common.csproj"
+            "C:\\Users\\ashpi\\Documents\\GitHub\\practice\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\ashpi\\Documents\\GitHub\\practice\\Common\\Common.csproj"
             }
           }
         }
@@ -66,13 +67,15 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -81,7 +84,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

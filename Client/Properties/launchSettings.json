@@ -2,7 +2,8 @@
   "profiles": {
     "Client": {
       "commandName": "Project",
-      "commandLineArgs": "127.0.0.1 10000 -receive D:\\!Test\\PutHere\\Test1.txt"
+      //"commandLineArgs": "127.0.0.1 10000 -transmit D:\\D\\!Test\\TakeHere\\Test1.txt"
+      "commandLineArgs": "127.0.0.1 10000 -receive D:\\D\\!Test\\PutHere\\Test1.txt"
     }
   }
 }

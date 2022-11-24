@@ -7,3 +7,13 @@ C:\Users\Sasha\source\repos\PracticeFirst\Common\bin\Debug\netcoreapp3.1\Common.
 C:\Users\Sasha\source\repos\PracticeFirst\Common\bin\Debug\netcoreapp3.1\Common.pdb
 C:\Users\Sasha\source\repos\PracticeFirst\Common\obj\Debug\netcoreapp3.1\Common.dll
 C:\Users\Sasha\source\repos\PracticeFirst\Common\obj\Debug\netcoreapp3.1\Common.pdb
+C:\Users\ashpi\Documents\GitHub\practice\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+C:\Users\ashpi\Documents\GitHub\practice\Common\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\ashpi\Documents\GitHub\practice\Common\bin\Debug\netcoreapp3.1\Common.pdb
+C:\Users\ashpi\Documents\GitHub\practice\Common\obj\Debug\netcoreapp3.1\Common.csproj.AssemblyReference.cache
+C:\Users\ashpi\Documents\GitHub\practice\Common\obj\Debug\netcoreapp3.1\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ashpi\Documents\GitHub\practice\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+C:\Users\ashpi\Documents\GitHub\practice\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+C:\Users\ashpi\Documents\GitHub\practice\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+C:\Users\ashpi\Documents\GitHub\practice\Common\obj\Debug\netcoreapp3.1\Common.dll
+C:\Users\ashpi\Documents\GitHub\practice\Common\obj\Debug\netcoreapp3.1\Common.pdb

@@ -6,7 +6,7 @@ namespace Server
 {
     public class Storage
     {
-        public string Add(string[] path)
+        public string Add(byte[] path)
         {
             _lock.EnterWriteLock();
             try
@@ -23,17 +23,17 @@ namespace Server
                 _lock.ExitWriteLock();
             }
         }
-        public string[] Get()
+        public byte[] Get()
         {
             _lock.EnterReadLock();
             try
             {
-                var strings = new string[_list.Count];
-                for (var i = 0; i < strings.Length; i++)
+                var bytes = new byte[_list.Count];
+                for (var i = 0; i < bytes.Length; i++)
                 {
-                    strings[i] = _list[i];
+                    bytes[i] = _list[i];
                 }
-                return strings;
+                return bytes;
             }
             finally
             {
@@ -42,6 +42,6 @@ namespace Server
         }
 
         private readonly ReaderWriterLockSlim _lock = new ReaderWriterLockSlim();
-        private readonly List<string> _list = new List<string>();
+        private readonly List<byte> _list = new List<byte>();
     }
 }
